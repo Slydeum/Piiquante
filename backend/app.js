@@ -16,7 +16,7 @@ app.use(helmet({
 
 // connexion à MongoDB
 mongoose.set('strictQuery', false);
-mongoose.connect('mongodb+srv://seb:Azerty123@cluster0.mlmn7ua.mongodb.net/?retryWrites=true&w=majority',
+mongoose.connect(process.env.MONGODB,
   {
     useNewUrlParser: true,
     useUnifiedTopology: true
