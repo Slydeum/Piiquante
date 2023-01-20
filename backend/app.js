@@ -38,6 +38,9 @@ app.use(cors());
 // json en js
 app.use(express.json());
 
+// contre injection de code
+app.use(helmet());
+
 // dossier images
 app.use('/images', express.static(path.join(__dirname, 'images')));
 
