@@ -2,7 +2,7 @@
 const bcrypt = require('bcrypt');  // bcrypt permet de chiffrer
 const jwt = require('jsonwebtoken');  // tokens
 const User = require('../models/User'); // schéma utilisateur
-//8888888888888888require('dotenv').config();  // variables d'environnement
+require('dotenv').config();  // variables d'environnement
 
 //// créer un compte
 exports.signup = (req, res, next) => {
