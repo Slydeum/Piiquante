@@ -1,22 +1,20 @@
-// imports
+// configure un serveur Express 
+
+
 require('dotenv').config();  // variables d'environnement
 const express = require('express'); // framework node
 const mongoose = require('mongoose');  // mongoDB
 const path = require('path'); // système de fichiers
-const helmet = require('helmet');  // module de sécurité
-const cors = require('cors'); // protège les headers
+const cors = require('cors'); // sécurité protège les headers
 
 
 // création de express
 const app = express();
 
-app.use(helmet({
-  crossOriginResourcePolicy: false,
-}));
 
 // connexion à MongoDB
 mongoose.set('strictQuery', false);
-mongoose.connect(process.env.MONGODB,
+mongoose.connect(process.env.MONGODB,  // via variable d'environnment
   {
     useNewUrlParser: true,
     useUnifiedTopology: true
@@ -32,14 +30,11 @@ app.use((req, res, next) => {
   next();
 });
 
-// protége les en-têtes 
+// sécurité protége les headers
 app.use(cors());
 
 // json en js
 app.use(express.json());
-
-// contre injection de code
-app.use(helmet());
 
 // dossier images
 app.use('/images', express.static(path.join(__dirname, 'images')));

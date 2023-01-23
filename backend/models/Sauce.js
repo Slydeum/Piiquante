@@ -1,7 +1,9 @@
-// import
+// schema de données d'une sauce
+
+
 const mongoose = require("mongoose");
 
-// Schéma de données d'une sauce
+// schéma
 const sauceSchema = mongoose.Schema({
   userId: { type: String, required: true },
   name: { type: String, required: true },

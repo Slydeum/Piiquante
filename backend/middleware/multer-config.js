@@ -1,8 +1,10 @@
-// import
-const multer = require("multer");  // gère les fichiers envoyés
+// gére les fichiers envoyés par les utilisateurs
 
 
-// formats autorisés
+const multer = require("multer");
+
+
+// formats des images autorisés
 const MIME_TYPES = {
   "image/jpg": "jpg",
   "image/jpeg": "jpg",
@@ -20,4 +22,5 @@ const storage = multer.diskStorage({
   },
 });
 
+// fichier unique pour configuration et export
 module.exports = multer({ storage }).single("image");

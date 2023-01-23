@@ -1,4 +1,7 @@
-// imports
+/* configure et démarre un serveur HTTP pour une application Node.js 
+en utilisant le module app importé*/
+
+
 const http = require('http');
 const app = require('./app');
 

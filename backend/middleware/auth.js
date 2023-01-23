@@ -1,5 +1,6 @@
-// import
-const jwt = require('jsonwebtoken'); // token
+// vérifie la validité du token
+
+const jwt = require('jsonwebtoken');
 
 
 module.exports = (req, res, next) => {
