@@ -1,5 +1,7 @@
 // vérifie la validité du token
 
+
+// import
 const jwt = require('jsonwebtoken');
 
 

@@ -1,6 +1,7 @@
 // schema de données d'une sauce
 
 
+// import
 const mongoose = require("mongoose");
 
 // schéma

@@ -1,6 +1,7 @@
 // schéma de données d'un utilisateur
 
 
+// import
 const mongoose = require("mongoose");
 const uniqueValidator = require("mongoose-unique-validator");
 

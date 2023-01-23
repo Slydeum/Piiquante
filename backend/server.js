@@ -1,10 +1,11 @@
 /* configure et démarre un serveur HTTP pour une application Node.js 
 en utilisant le module app importé*/
 
-
+// imports
 const http = require('http');
 const app = require('./app');
 
+// permet de vérifier la validité du port spécifié, en s'assurant qu'il est un nombre entier valide
 const normalizePort = val => {
   const port = parseInt(val, 10);
 
@@ -16,7 +17,7 @@ const normalizePort = val => {
   }
   return false;
 };
-const port = normalizePort(process.env.PORT || '3000'); // renvoi du port
+const port = normalizePort(process.env.PORT || '3000'); // définition du port
 app.set('port', port);
 
 // prend en compte les différentes erreurs
@@ -40,7 +41,7 @@ const errorHandler = error => {
   }
 };
 
-const server = http.createServer(app);
+const server = http.createServer(app); // crée le serveur
 
 server.on('error', errorHandler);
 server.on('listening', () => {

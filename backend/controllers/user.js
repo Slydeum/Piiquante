@@ -1,6 +1,6 @@
 // système d'inscription et de connexion d'utilisateur
 
-
+// imports
 const bcrypt = require('bcrypt');  // chiffre et hache le mot de passe
 const jwt = require('jsonwebtoken');  // crée et vérifie les tokens pour l'authentification
 const User = require('../models/User'); // schéma utilisateur
