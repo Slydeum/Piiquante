@@ -15,7 +15,7 @@ const app = express();
 
 
 // connexion à mongoDB
-mongoose.set('strictQuery', false);  // désactive la validation stricte des requêtes
+mongoose.set('strictQuery', false);  // désactive la validation stricte des requêtes(message terminal)
 mongoose.connect(process.env.MONGODB,  // connexion via variable d'environnment(.env)
   {
     useNewUrlParser: true,
